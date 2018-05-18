@@ -86,7 +86,7 @@ class TabBar extends Component {
           renderScene={this.renderScene}
         />
         
-        {state.appendToTabs()}
+        {!hideTabBar ? state.appendToTabs() : null}
 
         {!hideTabBar && state.children.filter(el => el.icon).length > 0 &&
           (state.tabBarBackgroundImage ? (
